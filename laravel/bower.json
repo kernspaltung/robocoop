@@ -1,0 +1,13 @@
+{
+  "name": "coop",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "~6.1.2",
+    "motion-ui": "~1.1.1"
+  }
+}

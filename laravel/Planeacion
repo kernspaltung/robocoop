@@ -1,0 +1,200 @@
+
+User
+
+Task
+	x - name
+        description
+        extra_info
+        date_expected
+        date_finished
+        duration_expected
+        duration_finished
+        done
+        status
+        asignees
+
+
+Vista Tareas
+
+	-> planificar interfaz para poder añadir + de 1 usuario
+
+
+
+
+Job
+
+	name
+	description
+	deliverables
+	payments
+	tasks
+	sessions
+	materials
+
+	-> Añadir tareas -> interfaz añadir tarea
+	-> Añadir chamba -> interfaz añadir tarea
+		- Añadir costo de proyecto 
+			- Total
+			- Distribuido en pagos calendarizables
+		- Añadir tareas
+		- Añadir sesiones
+			- Añadir tareas
+
+
+
+Sesion ->
+	Tiempo: 
+
+		Tareas -> reloj con pausa, 
+			- tiempo final editable
+
+		Al cerrar tarea
+			Almacena su tiempo
+		Finalizar sesión
+			-> Almacena tiempo total (suma de tareas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+Schemas
+
+
+
+Transaction
+	Types:
+		income
+		fund_Deposits
+		fee
+		expense
+		tax_payment
+
+	Data
+
+	Fields
+		date
+		done
+		origin
+		receiver
+		asignees
+		account_no. (optional)
+		concept
+		installment ( i.e: 1 / 3 )
+		amount
+		tax_due
+		extra_info
+		attachments
+
+
+Material
+	types
+		Tool
+		Disposable
+
+	Owner
+		Organization
+		Group
+		User
+
+	Measurement Unit
+	Quantity
+	Cost per 1 Unit
+
+
+Inventory
+	types
+		
+		rentable
+		rent_status: -1->not available, 0->in_storage, 1->outgoing, 2->return -> check() -> 0
+		lend: -1->not available, 0->in_storage, 1->outgoing, 2->return -> check() -> 0
+		in_stock:boolean
+		
+		damage -> write report -> notice
+		loss -> write report -> notice
+		
+		
+
+
+	materials_used = [ id => [amount,extra_info] ]
+	materials_costs = [ id => cost ]
+
+
+
+
+Job
+	
+ 	-> Config Vars
+ 		- Status Types
+
+
+	Calendar
+		->	list/edit view_all dates, sessions, tasks 
+			(order:chronological)
+	Tasks
+		->	list/edit view_all sessions (and their respective tasks) and sesion-less tasks
+			(order:chronological)
+	Finances
+		->	chronologically list/edit view_all transactions
+			(order:chronological)
+		->	Add new +
+
+	Materials
+		->	list/edit view_all materials used
+			(order:amount $)
+		
+
+
+
+Task
+ 	-> Config Vars
+ 		- Status Types
+
+	Types:
+		Work
+		Delivery
+		Stand-by
+
+
+
+ 	-> Config Vars
+ 		- StatusTypes
+ 		- Cost Per Hour
+
+
+
+...
+
+
+
+
+
+
+--------
+
+Schemas:
+
+--------
+
+
+Organization
+Group
+User
+
+
+Job
+Session
+Task
+
+Inventory
+Material
+
+Transaction
+Fund
