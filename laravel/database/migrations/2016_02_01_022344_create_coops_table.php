@@ -10,7 +10,7 @@ class CreateCoopsTable extends Migration
         Schema::create('coops', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
-            $table->json('administrators');
+            $table->text('administrators');
             $table->rememberToken();
             $table->timestamps();
         });

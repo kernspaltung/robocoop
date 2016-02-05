@@ -24,7 +24,7 @@ class CreateTableTasks extends Migration
             $table->string('duration_finished');
             $table->boolean('done');
             $table->integer('status');
-            $table->json('asignees');
+            $table->text('asignees');
             $table->timestamps();
         });
 

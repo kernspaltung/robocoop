@@ -10,14 +10,14 @@ class CreateJobsTable extends Migration
     Schema::create('jobs', function (Blueprint $table) {
         $table->string('name')->unique();
         $table->string( 'description' );
-        $table->json( 'deliverables' );
+        $table->text( 'deliverables' );
         $table->integer( 'status' );
-        $table->json( 'administrators' );
-        $table->json( 'members' );
-        $table->json( 'tasks' );
-        $table->json( 'sessions' );
-        $table->json( 'materials' );
-        $table->json( 'payments' );
+        $table->text( 'administrators' );
+        $table->text( 'members' );
+        $table->text( 'tasks' );
+        $table->text( 'sessions' );
+        $table->text( 'materials' );
+        $table->text( 'payments' );
         $table->rememberToken();
         $table->timestamps();
     });
