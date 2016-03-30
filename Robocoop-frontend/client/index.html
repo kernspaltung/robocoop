@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>RoboCoop</title>
+   <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+   <script src="./assets/js/foundation.js"></script>
+   <script src="./assets/js/templates.js"></script>
+   <script src="./assets/js/routes.js"></script>
+   <script src="./assets/js/app.js"></script>
+</head>
+<body>
+   <div class="grid-frame vertical">
+
+      <div class="grid-block shrink expanded expand">
+
+
+         <header class="grid-block">
+
+            <!-- #logotipo.small-4.medium-3.large-2.column -->
+            <div id="logotipo" class="grid-block shrink">
+               <a href="/" class="mxw100">
+                  <img src="http://fakeimg.pl/100x50" alt="Logotipo MEXCTRIMS" />
+               </a>
+            </div>
+
+            <div id="toggles" class="show-for-small-only grid-block align-right">
+               <div id="search_toggle" class="grid-block small-offset-6 shrink">
+                  <span class="fa fa-search"></span>
+               </div>
+               <div id="menu_toggle" class="grid-block shrink align-right">
+                  <span class="fa fa-bars"></span>
+               </div>
+            </div>
+
+            <nav id="menu" class="hide-for-small-only vertical medium-horizontal medium-offset-2 grid-block align-center">
+
+               <div id="menu_item_1" class="grid-block"><a ui-sref="ndt">Mis Nodos</a></div>
+               <div id="menu_item_2" class="grid-block">Conexiones</div>
+               <div id="menu_item_3" class="grid-block">La Red</div>
+
+
+            </nav>
+
+            <div id="search-bar" class="hide-for-small-only medium-offset-1 grid-block shrink">
+               <div id="search" class="grid-block">
+                  <div class="vertical grid-block align-center">
+                     <form action="#" method="post" id="search_form">
+                        <input type="text" name="search_string">
+                     </form>
+                  </div>
+
+                  <button type="submit" form="search_form" value="Submit"><span class="fa fa-search"></span></button>
+
+
+               </div>
+               <div id="user_actions" class="small-offset-1 grid-block">
+                  <div class="grid-block"><button><span class="fa fa-bell-o"></span></button></div>
+                  <div class="grid-block"><button><span class="fa fa-bell-o"></span></button></div>
+                  <div class="grid-block"><button><span class="fa fa-bell-o"></span></button></div>
+               </div>
+            </div>
+         </header>
+
+      </div> <!-- .grid-content -->
+
+      <div ui-view class="grid-content grid-block expand">
+      </div>
+
+
+      <footer class="grid-block align-center shrink">
+         Footer
+      </footer>
+   </div> <!-- .grid-frame -->
+
+</body>
+</html>

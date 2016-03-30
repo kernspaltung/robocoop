@@ -1,0 +1,22 @@
+@import "settings";
+@import "foundation";
+@import "font-awesome";
+
+* {
+   outline: 1px solid #cdf;
+}
+
+
+
+
+
+
+
+
+.mxw100 {
+   max-width: 100%;
+}
+
+img {
+   @extend .mxw100;
+}
