@@ -1,0 +1,150 @@
+---
+name: nodo
+url: /nodo/:id
+animationIn: fadeIn
+animationOut: fadeOut
+
+---
+
+<div class="grid-block vertical">
+   <!-- (.grid-block{Nombre Nodo}+.grid-block.shrink>i.fa.fa-caret-right)*3 -->
+   <header class="grid-block shrink expanded">
+      <div class="grid-block">
+         <div class="grid-block">Nombre Nodo</div>
+         <div class="grid-block"><i class="fa fa-caret-right"></i></div>
+         <div class="grid-block">Nombre Nodo</div>
+         <div class="grid-block"><i class="fa fa-caret-right"></i></div>
+         <div class="grid-block">Nombre Nodo</div>
+      </div>
+      <div class="grid-block align-right">
+         <button>
+            <span class="stat">17</span>
+            miembros
+         </button>
+      </div>
+   </header>
+
+
+   <div class="grid-block">
+
+         <!-- #column_$.grid-block.vertical.align-center{Column $}*3 -->
+
+         <div id="column_1" class="medium-4 grid-block vertical align-center">
+
+            <div class="grid-block vertical align-center text-center">Tareas</div>
+            <div class="grid-block vertical align-center text-center">Calendario</div>
+
+         </div>
+
+
+         <div id="column_2" class="medium-4 grid-block vertical">
+
+
+            <div class="row text-center">
+               <h4>Actividad</h4>
+            </div>
+            <div id="posts" class="grid-block vertical">
+
+               <div id="post_1" class="post grid-block shrink">
+                  <a ui-sref="post({id:1})">
+                     <div class="grid-block vertical">
+
+                           <div class="grid-block shrink horizontal">
+                              <div class="grid-block">
+                                 <img src="http://fakeimg.pl/50x50" alt="Imagen de Publicación">
+                              </div>
+                              <div class="grid-block">
+                                 <div class="row">
+                                    <a ui-sref="persona({id:1})">
+                                       Nombre de Persona
+                                    </a>
+                                    ha realizado una acción en
+                                    <a ui-sref="nodo({id:1})">
+                                       Nombre de Nodo
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row text-right">
+                              Hace 1 hora
+                           </div>
+                           <div class="grid-block">
+                              <div class="small-4 grid-block">
+                                 <img src="http://fakeimg.pl/200x100" alt="Imagen de Publicación">
+                              </div>
+                              <div class="small-8 grid-block">
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ab minima, culpa laudantium, reprehenderit iure?...</p>
+                              </div>
+                           </div>
+
+                     </div>
+                     <div class="grid-block shrink vertical">
+                        <div class="grid-block"><i class="fa fa-star-o"></i></div>
+                        <div class="grid-block"><i class="fa fa-star-o"></i></div>
+                        <div class="grid-block"><i class="fa fa-star-o"></i></div>
+                        <div class="grid-block"><i class="fa fa-star-o"></i></div>
+                     </div>
+                  </a>
+               </div>
+
+
+            </div>
+
+
+         </div>
+
+
+         <div id="column_3" class="medium-4 grid-block vertical align-center">
+
+
+            <div class="discusion grid-block vertical">
+               <div class="grid-block shrink">
+                  <h2>Discusion</h2>
+               </div>
+               <div class="grid-block vertical">
+                  <div class="grid-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam totam cum ipsam.</p></div>
+                  <div class="grid-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam totam cum ipsam.</p></div>
+               </div>
+            </div>
+
+            <div class="discusion grid-block vertical">
+               <div class="grid-block shrink">
+                  <h2>Discusion</h2>
+               </div>
+               <div class="grid-block vertical">
+                  <div class="grid-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem velit tempore provident!</p></div>
+                  <div class="grid-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem velit tempore provident!</p></div>
+               </div>
+            </div>
+
+            <div class="discusion grid-block vertical">
+               <div class="grid-block shrink">
+                  <h2>Discusion</h2>
+               </div>
+               <div class="grid-block vertical">
+                  <div class="grid-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repellat animi, voluptate?</p></div>
+                  <div class="grid-block"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repellat animi, voluptate?</p></div>
+               </div>
+            </div>
+
+
+         </div>
+
+
+
+   </div>
+
+
+
+   <!-- footer.grid-block.shrink.expanded>#used_tools.grid-block>((button>span.fa.fa-wrench)*5)^+#add_tools.grid-block.shrink>button>span.fa.fa-wrench -->
+   <footer class="grid-block shrink expanded">
+      <div id="used_tools" class="grid-block">
+         <button><span class="fa fa-wrench"></span></button>
+         <button><span class="fa fa-wrench"></span></button>
+         <button><span class="fa fa-wrench"></span></button>
+         <button><span class="fa fa-wrench"></span></button>
+         <button><span class="fa fa-wrench"></span></button>
+      </div>
+      <div id="add_tools" class="grid-block shrink"><button><span class="fa fa-wrench"></span></button></div>
+   </footer>
+</div>

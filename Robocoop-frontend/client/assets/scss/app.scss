@@ -6,8 +6,14 @@
    outline: 1px solid #cdf;
 }
 
+img {
+   max-width: 100%;
+   height: auto;
+}
 
-
+p {
+   font-size: 10px;
+}
 
 
 
@@ -15,8 +21,4 @@
 
 .mxw100 {
    max-width: 100%;
-}
-
-img {
-   @extend .mxw100;
 }

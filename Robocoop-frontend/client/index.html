@@ -13,10 +13,8 @@
 <body>
    <div class="grid-frame vertical">
 
-      <div class="grid-block shrink expanded expand">
 
-
-         <header class="grid-block">
+         <header class="grid-block shrink expanded expand">
 
             <!-- #logotipo.small-4.medium-3.large-2.column -->
             <div id="logotipo" class="grid-block shrink">
@@ -36,7 +34,11 @@
 
             <nav id="menu" class="hide-for-small-only vertical medium-horizontal medium-offset-2 grid-block align-center">
 
-               <div id="menu_item_1" class="grid-block"><a ui-sref="ndt">Mis Nodos</a></div>
+               <div id="menu_item_1" class="grid-block" ui-sref-active="active-menu_item">
+                  <a ui-sref="nodo({ id: 1 })">
+                     Mis Nodos
+                  </a>
+               </div>
                <div id="menu_item_2" class="grid-block">Conexiones</div>
                <div id="menu_item_3" class="grid-block">La Red</div>
 
@@ -63,9 +65,8 @@
             </div>
          </header>
 
-      </div> <!-- .grid-content -->
 
-      <div ui-view class="grid-content grid-block expand">
+      <div ui-view class="grid-block">
       </div>
 
 
